@@ -29,14 +29,13 @@ jobs:
 
       - name: Set variables
         run: |
-          echo "RELEASE_NAME=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
-          echo "TAG_NAME=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+          echo "NAME=$(date +%d-%m-%Y.%H-%M-%S)" >> $GITHUB_ENV
         shell: bash
 
       - name: Build geosite_tbd.dat file
         run: |
           cd code || exit 1
-          go run ./ --outputdir=../
+          go run ./
           cd ../ && rm -rf code
 
       - name: Git push assets to "release" branch
@@ -46,12 +45,12 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b release
           git add geosite_tbd.dat
-          git commit -m "${{ env.RELEASE_NAME }}"
+          git commit -m "${{ env.NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin release
 
       - name: Release and upload assets
         run: |
-          gh release create ${{ env.TAG_NAME }} --generate-notes --latest --title ${{ env.RELEASE_NAME }} ./geosite_tbd.dat
+          gh release create ${{ env.NAME }} --generate-notes --latest --title ${{ env.NAME }} ./geosite_tbd.dat
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

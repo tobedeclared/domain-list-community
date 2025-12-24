@@ -8,8 +8,7 @@ This project is not opinionated. In other words, it does NOT endorse, claim or i
 
 ## Download links
 
-- **dlc.dat**：[https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat](https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat)
-- **dlc.dat.sha256sum**：[https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat.sha256sum](https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat.sha256sum)
+- **geosite_tbd.dat**：[https://github.com/tobedeclared/domain-list-community/releases/latest/download/geosite_tbd.dat](https://github.com/tobedeclared/domain-list-community/releases/latest/download/geosite_tbd.dat)
 
 ## Usage example
 
@@ -68,7 +67,7 @@ Each file in the `data` directory can be used as a rule in this format: `geosite
 ## Generate `dlc.dat` manually
 
 - Install `golang` and `git`
-- Clone project code: `git clone https://github.com/v2fly/domain-list-community.git`
+- Clone project code: `git clone https://github.com/tobedeclared/domain-list-community.git`
 - Navigate to project root directory: `cd domain-list-community`
 - Install project dependencies: `go mod download`
 - Generate `dlc.dat` (without `datapath` option means to use domain lists in `data` directory of current working directory):
