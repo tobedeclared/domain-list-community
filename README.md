@@ -8,7 +8,7 @@ This project is not opinionated. In other words, it does NOT endorse, claim or i
 
 ## Download links
 
-- **geosite_tbd.dat**：[https://github.com/tobedeclared/domain-list-community/releases/latest/download/geosite_tbd.dat](https://github.com/tobedeclared/domain-list-community/releases/latest/download/geosite_tbd.dat)
+- **geosite_tbd.dat**：[https://github.com/tobedeclared/geosite/releases/latest/download/geosite_tbd.dat](https://github.com/tobedeclared/geosite/releases/latest/download/geosite_tbd.dat)
 
 ## Usage example
 
